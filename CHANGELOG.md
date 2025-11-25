@@ -1,5 +1,56 @@
 # Changelog
 
+## [0.2.17](https://github.com/sandeepvinayak/multicloudj/compare/multicloudj-v0.2.16...multicloudj-v0.2.17) (2025-11-25)
+
+
+### Bug Fixes
+
+* correct changelog to show commits between releases ([#97](https://github.com/sandeepvinayak/multicloudj/issues/97)) ([f41d143](https://github.com/sandeepvinayak/multicloudj/commit/f41d1434b9f407487c4bd500973b72b9f8cf8275))
+* fix the build for iam ([#161](https://github.com/sandeepvinayak/multicloudj/issues/161)) ([3f4c04c](https://github.com/sandeepvinayak/multicloudj/commit/3f4c04c16153abb8df6e859f92baea9cc89f7a32))
+* upgrade lombok dependency to 1.18.34 for Java compatibility ([39dbe9f](https://github.com/sandeepvinayak/multicloudj/commit/39dbe9fddcde6477cdae3e39478c8ce511c11aac))
+* upgrade lombok-maven-plugin to 1.18.30.0 ([82b533b](https://github.com/sandeepvinayak/multicloudj/commit/82b533bb60cee14e2affa26e78d168074fbc7c99))
+
+
+### Blob Store
+
+* add getTag and setTag apis ([#117](https://github.com/sandeepvinayak/multicloudj/issues/117)) ([942347e](https://github.com/sandeepvinayak/multicloudj/commit/942347ef2ef428f0a19742078349b22df21cf6a9))
+* Add SSE in multi-part upload ([#112](https://github.com/sandeepvinayak/multicloudj/issues/112)) ([32a920f](https://github.com/sandeepvinayak/multicloudj/commit/32a920fb6625cfdd30be6d4c9035429a0ebc2d0b))
+* Enable tags in the GcpTransformer ([#127](https://github.com/sandeepvinayak/multicloudj/issues/127)) ([728a632](https://github.com/sandeepvinayak/multicloudj/commit/728a6328721f9e0b146b29ac17b8c75ba8ccabd5))
+* fix GCP async client builder for configs ([#123](https://github.com/sandeepvinayak/multicloudj/issues/123)) ([088f0a2](https://github.com/sandeepvinayak/multicloudj/commit/088f0a2be5eb9b5165624167a653540dbcb8d80c))
+* fix the retry config for the bucketclient ([#135](https://github.com/sandeepvinayak/multicloudj/issues/135)) ([b3a72e4](https://github.com/sandeepvinayak/multicloudj/commit/b3a72e4178d092e257a5fa5d6580eb9beb72f715))
+* onboard retry config in the client and aws ([#113](https://github.com/sandeepvinayak/multicloudj/issues/113)) ([8df8d31](https://github.com/sandeepvinayak/multicloudj/commit/8df8d3169ea65fddb29e997b1b1d32a5c8c5c2d6))
+
+
+### Document Store
+
+* release please and fix the test ([#105](https://github.com/sandeepvinayak/multicloudj/issues/105)) ([d7458bd](https://github.com/sandeepvinayak/multicloudj/commit/d7458bd16fc9134a2faa6878d28716f66a3f2ea4))
+* test the release ([#101](https://github.com/sandeepvinayak/multicloudj/issues/101)) ([c94e18a](https://github.com/sandeepvinayak/multicloudj/commit/c94e18a270d80c44f4d53773ec9c6003d99ce2c5))
+
+
+### STS
+
+* enable web identity in aws sts and fix gcp get caller id ([#149](https://github.com/sandeepvinayak/multicloudj/issues/149)) ([fe1a50b](https://github.com/sandeepvinayak/multicloudj/commit/fe1a50bbb6d81cfcd629ceb2fface808dba6e752))
+* Make STS client anynomous for web identity ([#157](https://github.com/sandeepvinayak/multicloudj/issues/157)) ([a705153](https://github.com/sandeepvinayak/multicloudj/commit/a7051537ca4b91eb76ac1c531385b68b1423a8a4))
+
+
+### PubSub
+
+* add getAttributes for gcp pubsub ([#120](https://github.com/sandeepvinayak/multicloudj/issues/120)) ([228ab6f](https://github.com/sandeepvinayak/multicloudj/commit/228ab6fda6f7ad7f963ef3c676cac513c4d62520))
+* add send and receive apis for AWS SQS ([#125](https://github.com/sandeepvinayak/multicloudj/issues/125)) ([37f1e07](https://github.com/sandeepvinayak/multicloudj/commit/37f1e072b9d557b6903738a331e4b52be5c79713))
+* fix client initialization in GCP ([#148](https://github.com/sandeepvinayak/multicloudj/issues/148)) ([6b08244](https://github.com/sandeepvinayak/multicloudj/commit/6b082442d20e49ebfc8f6714d95edec280ea0fb5))
+
+
+### IAM
+
+* driver layer contract for IAM ([#122](https://github.com/sandeepvinayak/multicloudj/issues/122)) ([c929930](https://github.com/sandeepvinayak/multicloudj/commit/c929930f041f7de4b2e8129d372be7beabeb5850))
+* implement policy related APIs(GCP) ([#141](https://github.com/sandeepvinayak/multicloudj/issues/141)) ([9f0d5a1](https://github.com/sandeepvinayak/multicloudj/commit/9f0d5a18e8069f35d07778c872db252be8ac394d))
+* onboarding client layer for IAM ([#90](https://github.com/sandeepvinayak/multicloudj/issues/90)) ([a57e09d](https://github.com/sandeepvinayak/multicloudj/commit/a57e09deb11eae6e0c3abe28a33f912729131d2e))
+
+
+### Code Refactoring
+
+* converge to a single patter for type safety ([#130](https://github.com/sandeepvinayak/multicloudj/issues/130)) ([3511698](https://github.com/sandeepvinayak/multicloudj/commit/351169864f0268c568150ce1d56dd35734ea5ba8))
+
 ## [0.2.16](https://github.com/salesforce/multicloudj/compare/multicloudj-v0.2.15...multicloudj-v0.2.16) (2025-11-21)
 
 
