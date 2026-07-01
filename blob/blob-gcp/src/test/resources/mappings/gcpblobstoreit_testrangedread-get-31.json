@@ -1,5 +1,5 @@
 {
-  "id" : "828f4d27-85a4-45b8-9ccd-ef5c0f846ca5",
+  "id" : "49843e2d-b729-4ec7-b67e-c874aa5f4d24",
   "name" : "GcpBlobStoreIT_testRangedRead-GET-31",
   "request" : {
     "urlPath" : "/storage/v1/b/substrate-sdk-gcp-poc1-test-bucket-versioned/o/conformance-tests%2FtestRangedRead_versioned",
@@ -12,7 +12,7 @@
     "queryParameters" : {
       "generation" : {
         "hasExactly" : [ {
-          "equalTo" : "1782870088305934"
+          "equalTo" : "1782873633236682"
         } ]
       },
       "projection" : {
@@ -24,23 +24,23 @@
   },
   "response" : {
     "status" : 200,
-    "body" : "{\n  \"kind\": \"storage#object\",\n  \"id\": \"substrate-sdk-gcp-poc1-test-bucket-versioned/conformance-tests/testRangedRead_versioned/1782870088305934\",\n  \"selfLink\": \"https://www.googleapis.com/storage/v1/b/substrate-sdk-gcp-poc1-test-bucket-versioned/o/conformance-tests%2FtestRangedRead_versioned\",\n  \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/substrate-sdk-gcp-poc1-test-bucket-versioned/o/conformance-tests%2FtestRangedRead_versioned?generation=1782870088305934&alt=media\",\n  \"name\": \"conformance-tests/testRangedRead_versioned\",\n  \"bucket\": \"substrate-sdk-gcp-poc1-test-bucket-versioned\",\n  \"generation\": \"1782870088305934\",\n  \"metageneration\": \"1\",\n  \"contentType\": \"application/octet-stream\",\n  \"storageClass\": \"STANDARD\",\n  \"size\": \"47\",\n  \"md5Hash\": \"T+WNlSpPVYjzKzCl+bYs2g==\",\n  \"crc32c\": \"YmH3dA==\",\n  \"etag\": \"CI6ardKssJUDEAE=\",\n  \"timeCreated\": \"2026-07-01T01:41:28.351Z\",\n  \"updated\": \"2026-07-01T01:41:28.351Z\",\n  \"timeStorageClassUpdated\": \"2026-07-01T01:41:28.351Z\",\n  \"timeFinalized\": \"2026-07-01T01:41:28.351Z\"\n}\n",
+    "body" : "{\n  \"kind\": \"storage#object\",\n  \"id\": \"substrate-sdk-gcp-poc1-test-bucket-versioned/conformance-tests/testRangedRead_versioned/1782873633236682\",\n  \"selfLink\": \"https://www.googleapis.com/storage/v1/b/substrate-sdk-gcp-poc1-test-bucket-versioned/o/conformance-tests%2FtestRangedRead_versioned\",\n  \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/substrate-sdk-gcp-poc1-test-bucket-versioned/o/conformance-tests%2FtestRangedRead_versioned?generation=1782873633236682&alt=media\",\n  \"name\": \"conformance-tests/testRangedRead_versioned\",\n  \"bucket\": \"substrate-sdk-gcp-poc1-test-bucket-versioned\",\n  \"generation\": \"1782873633236682\",\n  \"metageneration\": \"1\",\n  \"contentType\": \"application/octet-stream\",\n  \"storageClass\": \"STANDARD\",\n  \"size\": \"47\",\n  \"md5Hash\": \"T+WNlSpPVYjzKzCl+bYs2g==\",\n  \"crc32c\": \"YmH3dA==\",\n  \"etag\": \"CMrN2uy5sJUDEAE=\",\n  \"timeCreated\": \"2026-07-01T02:40:33.286Z\",\n  \"updated\": \"2026-07-01T02:40:33.286Z\",\n  \"timeStorageClassUpdated\": \"2026-07-01T02:40:33.286Z\",\n  \"timeFinalized\": \"2026-07-01T02:40:33.286Z\"\n}\n",
     "headers" : {
       "Alt-Svc" : "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
       "Server" : "UploadServer",
       "Cache-Control" : "private, max-age=0, must-revalidate, no-transform",
-      "ETag" : "CI6ardKssJUDEAE=",
-      "X-GUploader-UploadID" : "AJ5rDhEEm_inTbqdUKJsDj8Ez08ipmwKse-vjZolr6TyG-3p9vIj_Ges0pwsdyg5f8O7Ms-bN9B4ynnK9gn-ug",
+      "ETag" : "CMrN2uy5sJUDEAE=",
+      "X-GUploader-UploadID" : "AJ5rDhG3w03F86XXj77HGQqyWBaqUjQcAKVRVAOsjgRdGJfAFggXwpqikQ00h6H6QK0nhuHZn_rWAWCWer6u5w",
       "Vary" : [ "Origin", "X-Origin" ],
-      "Expires" : "Wed, 01 Jul 2026 01:41:29 GMT",
-      "Date" : "Wed, 01 Jul 2026 01:41:29 GMT",
+      "Expires" : "Wed, 01 Jul 2026 02:40:34 GMT",
+      "Date" : "Wed, 01 Jul 2026 02:40:34 GMT",
       "Content-Type" : "application/json; charset=UTF-8"
     }
   },
-  "uuid" : "828f4d27-85a4-45b8-9ccd-ef5c0f846ca5",
+  "uuid" : "49843e2d-b729-4ec7-b67e-c874aa5f4d24",
   "persistent" : true,
   "scenarioName" : "scenario-6-storage-v1-b-substrate-sdk-gcp-poc1-test-bucket-versioned-o-conformance-tests-testRangedRead_versioned",
   "requiredScenarioState" : "scenario-6-storage-v1-b-substrate-sdk-gcp-poc1-test-bucket-versioned-o-conformance-tests-testRangedRead_versioned-3",
   "newScenarioState" : "scenario-6-storage-v1-b-substrate-sdk-gcp-poc1-test-bucket-versioned-o-conformance-tests-testRangedRead_versioned-4",
-  "insertionIndex" : 1131
+  "insertionIndex" : 1204
 }
