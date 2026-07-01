@@ -1,5 +1,5 @@
 {
-  "id" : "aa2af009-d256-40c1-b113-92c6fb3d4227",
+  "id" : "c4d149d1-501e-447b-844b-a28667c16bcd",
   "name" : "GcpBlobStoreIT_testVersionedCopy-POST-21",
   "request" : {
     "urlPath" : "/storage/v1/b/substrate-sdk-gcp-poc1-test-bucket-versioned/o/conformance-tests%2FversionedCopy%2Fblob/rewriteTo/b/substrate-sdk-gcp-poc1-test-bucket-versioned/o/conformance-tests%2FversionedCopy%2Fcopied-blob-v2",
@@ -17,27 +17,27 @@
       },
       "sourceGeneration" : {
         "hasExactly" : [ {
-          "equalTo" : "1772658302605229"
+          "equalTo" : "1782869792494892"
         } ]
       }
     }
   },
   "response" : {
     "status" : 200,
-    "body" : "{\n  \"kind\": \"storage#rewriteResponse\",\n  \"totalBytesRewritten\": \"38\",\n  \"objectSize\": \"38\",\n  \"done\": true,\n  \"resource\": {\n    \"kind\": \"storage#object\",\n    \"id\": \"substrate-sdk-gcp-poc1-test-bucket-versioned/conformance-tests/versionedCopy/copied-blob-v2/1772658305637989\",\n    \"selfLink\": \"https://www.googleapis.com/storage/v1/b/substrate-sdk-gcp-poc1-test-bucket-versioned/o/conformance-tests%2FversionedCopy%2Fcopied-blob-v2\",\n    \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/substrate-sdk-gcp-poc1-test-bucket-versioned/o/conformance-tests%2FversionedCopy%2Fcopied-blob-v2?generation=1772658305637989&alt=media\",\n    \"name\": \"conformance-tests/versionedCopy/copied-blob-v2\",\n    \"bucket\": \"substrate-sdk-gcp-poc1-test-bucket-versioned\",\n    \"generation\": \"1772658305637989\",\n    \"metageneration\": \"1\",\n    \"contentType\": \"application/octet-stream\",\n    \"storageClass\": \"STANDARD\",\n    \"size\": \"38\",\n    \"md5Hash\": \"2ksGazsjJF4qLp6jLPdSYw==\",\n    \"crc32c\": \"aDUimg==\",\n    \"etag\": \"COW89uSSh5MDEAE=\",\n    \"timeCreated\": \"2026-03-04T21:05:05.689Z\",\n    \"updated\": \"2026-03-04T21:05:05.689Z\",\n    \"timeStorageClassUpdated\": \"2026-03-04T21:05:05.689Z\",\n    \"timeFinalized\": \"2026-03-04T21:05:05.689Z\"\n  }\n}\n",
+    "body" : "{\n  \"kind\": \"storage#rewriteResponse\",\n  \"totalBytesRewritten\": \"38\",\n  \"objectSize\": \"38\",\n  \"done\": true,\n  \"resource\": {\n    \"kind\": \"storage#object\",\n    \"id\": \"substrate-sdk-gcp-poc1-test-bucket-versioned/conformance-tests/versionedCopy/copied-blob-v2/1782869794972249\",\n    \"selfLink\": \"https://www.googleapis.com/storage/v1/b/substrate-sdk-gcp-poc1-test-bucket-versioned/o/conformance-tests%2FversionedCopy%2Fcopied-blob-v2\",\n    \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/substrate-sdk-gcp-poc1-test-bucket-versioned/o/conformance-tests%2FversionedCopy%2Fcopied-blob-v2?generation=1782869794972249&alt=media\",\n    \"name\": \"conformance-tests/versionedCopy/copied-blob-v2\",\n    \"bucket\": \"substrate-sdk-gcp-poc1-test-bucket-versioned\",\n    \"generation\": \"1782869794972249\",\n    \"metageneration\": \"1\",\n    \"contentType\": \"application/octet-stream\",\n    \"storageClass\": \"STANDARD\",\n    \"size\": \"38\",\n    \"md5Hash\": \"2ksGazsjJF4qLp6jLPdSYw==\",\n    \"crc32c\": \"aDUimg==\",\n    \"etag\": \"CNnEvcarsJUDEAE=\",\n    \"timeCreated\": \"2026-07-01T01:36:35.018Z\",\n    \"updated\": \"2026-07-01T01:36:35.018Z\",\n    \"timeStorageClassUpdated\": \"2026-07-01T01:36:35.018Z\",\n    \"timeFinalized\": \"2026-07-01T01:36:35.018Z\"\n  }\n}\n",
     "headers" : {
       "Alt-Svc" : "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
       "Server" : "UploadServer",
       "Cache-Control" : "no-cache, no-store, max-age=0, must-revalidate",
-      "X-GUploader-UploadID" : "AGQBYWwlIP3XWQf4mds_ZTEvtwA6uo5h6eq0LKRGqN2wxxnFZVrhLplWzbrAtjKVIxHxv5kwBp_xQuI",
+      "X-GUploader-UploadID" : "AJ5rDhFk4M5NzU7lswBelyHntZAXw2ig5wMPdMS2u_eXSuSuIF86Ouy7rnI8P0os6ssWJuLevdx8yUo1T_7Y0A",
       "Vary" : [ "Origin", "X-Origin" ],
       "Pragma" : "no-cache",
       "Expires" : "Mon, 01 Jan 1990 00:00:00 GMT",
-      "Date" : "Wed, 04 Mar 2026 21:05:05 GMT",
+      "Date" : "Wed, 01 Jul 2026 01:36:35 GMT",
       "Content-Type" : "application/json; charset=UTF-8"
     }
   },
-  "uuid" : "aa2af009-d256-40c1-b113-92c6fb3d4227",
+  "uuid" : "c4d149d1-501e-447b-844b-a28667c16bcd",
   "persistent" : true,
-  "insertionIndex" : 332
+  "insertionIndex" : 381
 }

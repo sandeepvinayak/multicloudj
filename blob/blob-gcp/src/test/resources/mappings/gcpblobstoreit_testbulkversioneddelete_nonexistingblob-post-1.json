@@ -1,32 +1,32 @@
 {
-  "id" : "805e0a97-927b-4f29-baea-42c20307a927",
+  "id" : "1b0d784a-191a-4797-8e1d-348e290c8f3b",
   "name" : "GcpBlobStoreIT_testBulkVersionedDelete_nonExistingBlob-POST-1",
   "request" : {
     "url" : "/batch/storage/v1",
     "method" : "POST",
     "bodyPatterns" : [ {
-      "matches" : "(?s)\\Q\\E--__END_OF_PART__[a-f0-9-]+__\\Q\r\nContent-Length: 620\r\nContent-Type: application/http\r\ncontent-id: 1\r\ncontent-transfer-encoding: binary\r\n\r\nDELETE https://storage.googleapis.com/storage/v1/b/substrate-sdk-gcp-poc1-test-bucket-versioned/o/conformance-tests%2FbulkDeleteByVersion%2Fnonexisting HTTP/1.1\r\nAuthorization: Bearer REDACTED_TOKEN\r\nx-goog-api-client: gl-java/17.0.18 gdcl/2.7.2 mac-os-x/26.5.1\r\nx-goog-user-project: substrate-sdk-gcp-poc1\r\nx-goog-gcs-idempotency-token: ab602742-36cf-4fa2-bb9b-086ceccfde94\r\n\r\n\r\n\\E--__END_OF_PART__[a-f0-9-]+__\\Q--\r\n\\E"
+      "matches" : "(?s)\\Q\\E--__END_OF_PART__[a-f0-9-]+__\\Q\r\nContent-Length: 1343\r\nContent-Type: application/http\r\ncontent-id: 1\r\ncontent-transfer-encoding: binary\r\n\r\nDELETE https://storage.googleapis.com/storage/v1/b/substrate-sdk-gcp-poc1-test-bucket-versioned/o/conformance-tests%2FbulkDeleteByVersion%2Fnonexisting HTTP/1.1\r\nAuthorization: Bearer ya29.c.c0AZ4bNpaPz5oWEhDRALGqFt7CZeipl0gTtC8h4q3-oRUAHrJDa4bPHJoCn8QupU1ZiBbyUns8t7aoqFS4K1pgJYF450mlGjLzaXylR2mRYwG1sWDjBPPQ07hNMf1TDRvrGbsIZ8K-KlQu_GjSuF-yQK7SHVGAJmjPDiOKCSBSI9SJq34xxenL_Q46EzQARjG9FFsovHPaXOI1dXKYpTzNhd8XIzR8iJNr0eRSR2Fj0YpkIoq0q83zsful3xnV2t42G3rCKQaGtDUuqA3EcNaEQmWJjjDR4cM0QDEi3PejfFB3CKmBoMAeYZOP8gFLyo47yoh2zSPrtAivI8Nl817ZqfhPpp7qp1S7lusE_Bbm-1b_Zm1JhIblqJGIsYM2mA_9XEwy0gh-kRgYV_fpwB4bGPvjACVJ1S5XaSZofo73PHRcW-Qb2Tjr10umBtKukeuzoEpNUlcZhhRxC2qTWhcQSXL6akY_7HuJdAcKlu-bPj34-SEQTAZkam-6TIU7zo822fxA1cDhtKJ6uFsOfSNjcWPsv0yzaP1_IuoGPCLEePai1JGKSgv2NTMqyNYH7FKH-Xu5-R5pXZ0pAodi4FlPPR5fCouPlBL0h9IPghufPGOJ-u4xjTsd_3rhjXEIeOJYo5S4T653KaVmfoQ8e47qInfkt3q1p2yWil75U-MpvIBjvgRBi3tXrnryMy3lujRuSm-ZQkcY26zr2pInmRvi19daJYJ6eiVm2O9pyOciSjgySx0c7tkU9U7j3XI4ZZeg1ag0drkhqud5Qnxvstz2i1z46al3i8vuu3S-632uh2XcO0FapOY4xIUhR4mI1wzIm3l6cI_2lmyXqXQr4sXvm9VxJ5n4opyap467vnj5lbZ6IhxF8u4MYinIdaokIdn6YQVYnVt4ws3Ym4yn3Uy8r4b8nnu-bU2pYbOvbpQg34_8qakmWOF3ViQBkeaR6QnijvOVZvhYF_6y6sqVxxn4U9FjU-aMW5S1JYytwOWmYd42c89ZMI7WiWu\r\nx-goog-api-client: gl-java/11.0.30 gdcl/2.7.2 mac-os-x/26.5.1\r\nx-goog-gcs-idempotency-token: 6cf24cdb-a401-474f-9a2a-2f489670d500\r\n\r\n\r\n\\E--__END_OF_PART__[a-f0-9-]+__\\Q--\r\n\\E"
     } ]
   },
   "response" : {
     "status" : 200,
-    "base64Body" : "LS1iYXRjaF9DM0xqcGUyLXhjY1FaQkgzVHlPRDliTXdRWHFWQjZnMQ0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9odHRwDQpDb250ZW50LUlEOiByZXNwb25zZS0xDQoNCkhUVFAvMS4xIDQwNCBOb3QgRm91bmQNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD1VVEYtOA0KRGF0ZTogVGh1LCAwNCBKdW4gMjAyNiAyMDowNDo0OCBHTVQNCkNhY2hlLUNvbnRyb2w6IG5vLWNhY2hlLCBuby1zdG9yZSwgbWF4LWFnZT0wLCBtdXN0LXJldmFsaWRhdGUNCkV4cGlyZXM6IE1vbiwgMDEgSmFuIDE5OTAgMDA6MDA6MDAgR01UDQpDb250ZW50LUxlbmd0aDogMzk1DQoNCnsKICAiZXJyb3IiOiB7CiAgICAiY29kZSI6IDQwNCwKICAgICJtZXNzYWdlIjogIk5vIHN1Y2ggb2JqZWN0OiBzdWJzdHJhdGUtc2RrLWdjcC1wb2MxLXRlc3QtYnVja2V0LXZlcnNpb25lZC9jb25mb3JtYW5jZS10ZXN0cy9idWxrRGVsZXRlQnlWZXJzaW9uL25vbmV4aXN0aW5nIiwKICAgICJlcnJvcnMiOiBbCiAgICAgIHsKICAgICAgICAibWVzc2FnZSI6ICJObyBzdWNoIG9iamVjdDogc3Vic3RyYXRlLXNkay1nY3AtcG9jMS10ZXN0LWJ1Y2tldC12ZXJzaW9uZWQvY29uZm9ybWFuY2UtdGVzdHMvYnVsa0RlbGV0ZUJ5VmVyc2lvbi9ub25leGlzdGluZyIsCiAgICAgICAgImRvbWFpbiI6ICJnbG9iYWwiLAogICAgICAgICJyZWFzb24iOiAibm90Rm91bmQiCiAgICAgIH0KICAgIF0KICB9Cn0KDQotLWJhdGNoX0MzTGpwZTIteGNjUVpCSDNUeU9EOWJNd1FYcVZCNmcxLS0NCg==",
+    "base64Body" : "LS1iYXRjaF9ONjhuVDE4R2ZIb0tpRU8teTI4dTNVbTNQaGhsSGhyXw0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9odHRwDQpDb250ZW50LUlEOiByZXNwb25zZS0xDQoNCkhUVFAvMS4xIDQwNCBOb3QgRm91bmQNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD1VVEYtOA0KRGF0ZTogV2VkLCAwMSBKdWwgMjAyNiAwMTozOTo0NCBHTVQNCkNhY2hlLUNvbnRyb2w6IG5vLWNhY2hlLCBuby1zdG9yZSwgbWF4LWFnZT0wLCBtdXN0LXJldmFsaWRhdGUNCkV4cGlyZXM6IE1vbiwgMDEgSmFuIDE5OTAgMDA6MDA6MDAgR01UDQpDb250ZW50LUxlbmd0aDogMzk1DQoNCnsKICAiZXJyb3IiOiB7CiAgICAiY29kZSI6IDQwNCwKICAgICJtZXNzYWdlIjogIk5vIHN1Y2ggb2JqZWN0OiBzdWJzdHJhdGUtc2RrLWdjcC1wb2MxLXRlc3QtYnVja2V0LXZlcnNpb25lZC9jb25mb3JtYW5jZS10ZXN0cy9idWxrRGVsZXRlQnlWZXJzaW9uL25vbmV4aXN0aW5nIiwKICAgICJlcnJvcnMiOiBbCiAgICAgIHsKICAgICAgICAibWVzc2FnZSI6ICJObyBzdWNoIG9iamVjdDogc3Vic3RyYXRlLXNkay1nY3AtcG9jMS10ZXN0LWJ1Y2tldC12ZXJzaW9uZWQvY29uZm9ybWFuY2UtdGVzdHMvYnVsa0RlbGV0ZUJ5VmVyc2lvbi9ub25leGlzdGluZyIsCiAgICAgICAgImRvbWFpbiI6ICJnbG9iYWwiLAogICAgICAgICJyZWFzb24iOiAibm90Rm91bmQiCiAgICAgIH0KICAgIF0KICB9Cn0KDQotLWJhdGNoX042OG5UMThHZkhvS2lFTy15Mjh1M1VtM1BoaGxIaHJfLS0NCg==",
     "headers" : {
       "Alt-Svc" : "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
       "Server" : "Upload Server",
       "X-Content-Type-Options" : "nosniff",
       "Pragma" : "no-cache",
-      "Date" : "Thu, 04 Jun 2026 20:04:48 GMT",
+      "Date" : "Wed, 01 Jul 2026 01:39:44 GMT",
       "X-Frame-Options" : "SAMEORIGIN",
       "Cache-Control" : "no-cache, no-store, max-age=0, must-revalidate",
-      "X-GUploader-UploadID" : "AJ5rDhHBWwpiGg0GW1C4weloRppXNFM6jBE00PMI7Do7UlfvemsTeEfR-L65M_YiygqksqI",
+      "X-GUploader-UploadID" : "AJ5rDhGk4HVVkTo7CTJKqkXvpuAAT8tuWynMlYsv4N0kyh76dGJSqqSxOlcXt-Y80sFh7qZYTMOFtASfMlvlFQ",
       "Vary" : [ "Origin", "X-Origin" ],
       "Expires" : "Mon, 01 Jan 1990 00:00:00 GMT",
       "X-XSS-Protection" : "1; mode=block",
-      "Content-Type" : "multipart/mixed; boundary=batch_C3Ljpe2-xccQZBH3TyOD9bMwQXqVB6g1"
+      "Content-Type" : "multipart/mixed; boundary=batch_N68nT18GfHoKiEO-y28u3Um3PhhlHhr_"
     }
   },
-  "uuid" : "805e0a97-927b-4f29-baea-42c20307a927",
+  "uuid" : "1b0d784a-191a-4797-8e1d-348e290c8f3b",
   "persistent" : true,
-  "insertionIndex" : 1419
+  "insertionIndex" : 915
 }

@@ -1,5 +1,5 @@
 {
-  "id" : "73775255-6da4-4997-9c82-57036de8dec8",
+  "id" : "41bf944c-c2ec-4a9a-a472-dd16f4ce95f8",
   "name" : "GcpBlobStoreIT_testMultipartUpload_completeAnAbortedUpload-POST-6",
   "request" : {
     "urlPath" : "/substrate-sdk-gcp-poc1-test-bucket/conformance-tests%2Fmultipart-completeAnAborted",
@@ -19,20 +19,17 @@
   },
   "response" : {
     "status" : 200,
-    "body" : "<?xml version='1.0' encoding='UTF-8'?><InitiateMultipartUploadResult xmlns='http://s3.amazonaws.com/doc/2006-03-01/'><Bucket>substrate-sdk-gcp-poc1-test-bucket</Bucket><Key>conformance-tests/multipart-completeAnAborted</Key><UploadId>ABPnzm5TQQGvPW-CmDxeSuEu65A0rhWxM-gkogLQwexdxJHbctzIJ4VRYaHD95sImK38h5Y</UploadId></InitiateMultipartUploadResult>",
+    "body" : "<?xml version='1.0' encoding='UTF-8'?><InitiateMultipartUploadResult xmlns='http://s3.amazonaws.com/doc/2006-03-01/'><Bucket>substrate-sdk-gcp-poc1-test-bucket</Bucket><Key>conformance-tests/multipart-completeAnAborted</Key><UploadId>ABPnzm59YuDy-lgHJlMfVtcrWHE1nqhOos-FOLOUAP_ywedSOcaJr07w3Ry1dxE3Uc9kQac</UploadId></InitiateMultipartUploadResult>",
     "headers" : {
       "Alt-Svc" : "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
       "Server" : "UploadServer",
-      "Cache-Control" : "no-cache, no-store, max-age=0, must-revalidate",
-      "X-GUploader-UploadID" : "AAVLpEiqAxvnsQiR2wrXM1_crfkvRh8TI96BI1bB9vFkyMYo8fYoOhs9fUcO2JtQue-PXfYc",
+      "X-GUploader-UploadID" : "AJ5rDhGX1qyxclMv_FYXNSfMUliguFPj2W_eOd3LvmiqLgnN8K2JD68yf15Pj3TTve84GMYZv1tJyTIWrd90ow",
       "Vary" : "Origin",
-      "Expires" : "Mon, 01 Jan 1990 00:00:00 GMT",
-      "Pragma" : "no-cache",
-      "Date" : "Thu, 04 Jun 2026 23:55:57 GMT",
+      "Date" : "Wed, 01 Jul 2026 01:40:46 GMT",
       "Content-Type" : "text/html; charset=UTF-8"
     }
   },
-  "uuid" : "73775255-6da4-4997-9c82-57036de8dec8",
+  "uuid" : "41bf944c-c2ec-4a9a-a472-dd16f4ce95f8",
   "persistent" : true,
-  "insertionIndex" : 1433
+  "insertionIndex" : 1091
 }

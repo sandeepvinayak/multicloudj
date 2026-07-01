@@ -183,17 +183,16 @@ public class GcpBlobStore extends AbstractBlobStore {
   @Override
   protected UploadResponse doUpload(UploadRequest uploadRequest, InputStream inputStream) {
     rejectUnsupportedChecksum(uploadRequest.getChecksumAlgorithm());
-    try (WriteChannel writer =
-            storage.writer(
-                transformer.toBlobInfo(uploadRequest),
-                transformer.getBlobWriteOptions(uploadRequest));
-         var channel = Channels.newOutputStream(writer)) {
-      ByteStreams.copy(inputStream, channel);
+    try {
+      Blob blob =
+          storage.createFrom(
+              transformer.toBlobInfo(uploadRequest),
+              inputStream,
+              transformer.getBlobWriteOptions(uploadRequest));
+      return transformer.toUploadResponse(blob);
     } catch (IOException e) {
       throw new SubstrateSdkException("Request failed while uploading from input stream", e);
     }
-    Blob blob = getRequiredBlob(BlobId.of(getBucket(), uploadRequest.getKey()));
-    return transformer.toUploadResponse(blob);
   }
 
   @Override
@@ -235,23 +234,24 @@ public class GcpBlobStore extends AbstractBlobStore {
   @Override
   protected DownloadResponse doDownload(
       DownloadRequest downloadRequest, OutputStream outputStream) {
-    BlobId blobId = transformer.toBlobId(downloadRequest);
     Blob blob = getRequiredBlobForDownload(downloadRequest);
-    // Parallel download uses Transfer Manager / file paths only; OutputStream downloads always use
-    // ReadChannel streaming (parallelDownload is ignored for this overload).
+    BlobId blobId = transformer.toBlobId(downloadRequest);
+    boolean hasRange =
+        downloadRequest.getStart() != null || downloadRequest.getEnd() != null;
+
     try (ReadChannel reader = storage.reader(blobId);
         var channel = Channels.newInputStream(reader)) {
-
-      var range =
-          transformer.computeRange(
-              downloadRequest.getStart(), downloadRequest.getEnd(), blob.getSize());
-      if (range.getLeft() != null) {
-        reader.seek(range.getLeft());
+      if (hasRange) {
+        var range =
+            transformer.computeRange(
+                downloadRequest.getStart(), downloadRequest.getEnd(), blob.getSize());
+        if (range.getLeft() != null) {
+          reader.seek(range.getLeft());
+        }
+        if (range.getRight() != null) {
+          reader.limit(range.getRight());
+        }
       }
-      if (range.getRight() != null) {
-        reader.limit(range.getRight());
-      }
-
       ByteStreams.copy(channel, outputStream);
       return transformer.toDownloadResponse(blob);
     } catch (IOException e) {
@@ -1704,9 +1704,11 @@ public class GcpBlobStore extends AbstractBlobStore {
     }
 
     private static CloseableHttpClient buildHttpClient(Builder builder) {
-      HttpClientBuilder httpClientBuilder = HttpClientBuilder.create();
+      HttpClientBuilder httpClientBuilder = ApacheHttpTransport.newDefaultHttpClientBuilder();
       httpClientBuilder.setDefaultRequestConfig(buildRequestConfig(builder));
-      httpClientBuilder.setConnectionManager(buildConnectionManager(builder));
+      if (builder.getMaxConnections() != null) {
+        httpClientBuilder.setConnectionManager(buildConnectionManager(builder.getMaxConnections()));
+      }
       if (builder.getIdleConnectionTimeout() != null) {
         httpClientBuilder.evictIdleConnections(
             builder.getIdleConnectionTimeout().toMillis(), TimeUnit.MILLISECONDS);
@@ -1714,13 +1716,11 @@ public class GcpBlobStore extends AbstractBlobStore {
       return httpClientBuilder.build();
     }
 
-    private static HttpClientConnectionManager buildConnectionManager(Builder builder) {
+    private static HttpClientConnectionManager buildConnectionManager(int maxConnections) {
       PoolingHttpClientConnectionManager connectionManager =
           new PoolingHttpClientConnectionManager();
-      if (builder.getMaxConnections() != null) {
-        connectionManager.setMaxTotal(builder.getMaxConnections());
-        connectionManager.setDefaultMaxPerRoute(builder.getMaxConnections());
-      }
+      connectionManager.setMaxTotal(maxConnections);
+      connectionManager.setDefaultMaxPerRoute(maxConnections);
       return connectionManager;
     }
 

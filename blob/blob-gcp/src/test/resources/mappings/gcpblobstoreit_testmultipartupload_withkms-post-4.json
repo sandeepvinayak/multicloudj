@@ -1,5 +1,5 @@
 {
-  "id" : "731ec588-334a-4ec0-bcc0-c625fe3c4905",
+  "id" : "bdc1f058-235f-4435-b509-f9f7c88c0a3c",
   "name" : "GcpBlobStoreIT_testMultipartUpload_withKms-POST-4",
   "request" : {
     "urlPath" : "/substrate-sdk-gcp-poc1-test-bucket/conformance-tests%2Fmultipart-withKms",
@@ -12,33 +12,30 @@
     "queryParameters" : {
       "uploadId" : {
         "hasExactly" : [ {
-          "equalTo" : "ABPnzm5-SFuh8VICm2jzyJFckhU1nX_fX-cihZfWuNahwvGxiu-iR0_fLBQI8peADOPdWqs"
+          "equalTo" : "ABPnzm6qRUWVddA40ynue-zOMQHnQJ1aALPrZVGAlicfXeeLJu71d1wJx2wJo-hdeAHCg74"
         } ]
       }
     },
     "bodyPatterns" : [ {
-      "equalToXml" : "<CompleteMultipartUpload><Part><PartNumber>1</PartNumber><ETag>\"CK/M5LDk7pQDEAEaJDZhMjU2OGU4LTAwMDAtMmIxMi05MTU5LTM0YzdlOTIwNTBmYg==\"</ETag></Part><Part><PartNumber>2</PartNumber><ETag>\"CK/M5LDk7pQDEAIaJDZhMjIzNGE3LTAwMDAtMjg0Mi1hNGQ1LWZjNDExNjcyZWE0MQ==\"</ETag></Part></CompleteMultipartUpload>"
+      "equalToXml" : "<CompleteMultipartUpload><Part><PartNumber>1</PartNumber><ETag>\"CO/T396rsJUDEAEaJDZhNDQzOTE2LTAwMDAtMmMzZC1iZTJjLTA0MDA2ZTZiZDlkMA==\"</ETag></Part><Part><PartNumber>2</PartNumber><ETag>\"CO/T396rsJUDEAIaJDZhM2Q0ZTFhLTAwMDAtMjY2ZS05MmYxLWI4ZGIzOGZiNTJkMg==\"</ETag></Part></CompleteMultipartUpload>"
     } ]
   },
   "response" : {
     "status" : 200,
-    "body" : "<?xml version='1.0' encoding='UTF-8'?><CompleteMultipartUploadResult xmlns='http://s3.amazonaws.com/doc/2006-03-01/'><Location>http://storage.googleapis.com/substrate-sdk-gcp-poc1-test-bucket/conformance-tests/multipart-withKms</Location><Bucket>substrate-sdk-gcp-poc1-test-bucket</Bucket><Key>conformance-tests/multipart-withKms</Key><ETag>\"-CMHX/7Hk7pQDEAE=\"</ETag></CompleteMultipartUploadResult>",
+    "body" : "<?xml version='1.0' encoding='UTF-8'?><CompleteMultipartUploadResult xmlns='http://s3.amazonaws.com/doc/2006-03-01/'><Location>http://storage.googleapis.com/substrate-sdk-gcp-poc1-test-bucket/conformance-tests/multipart-withKms</Location><Bucket>substrate-sdk-gcp-poc1-test-bucket</Bucket><Key>conformance-tests/multipart-withKms</Key><ETag>\"-CPuJ99+rsJUDEAE=\"</ETag></CompleteMultipartUploadResult>",
     "headers" : {
       "x-goog-stored-content-length" : "10485760",
       "Alt-Svc" : "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
       "Server" : "UploadServer",
-      "Cache-Control" : "no-cache, no-store, max-age=0, must-revalidate",
       "x-goog-metageneration" : "1",
-      "X-GUploader-UploadID" : "AAVLpEjtU6IrC5AMKT7FQXowB5zbY0KLs5TJFopeHOERJIJouq9wgRS-cPIpaYSkmuAr8RB6huyQ4Rc",
+      "X-GUploader-UploadID" : "AJ5rDhEAMI0OKiP8FSRJNc12gZVVTMJGlUFIe4qvW-4Hcdij12vxkVK3udlQzfUheew3EFuChZVeXzBWPpUOyA",
       "Vary" : "Origin",
-      "Expires" : "Mon, 01 Jan 1990 00:00:00 GMT",
-      "Pragma" : "no-cache",
-      "x-goog-generation" : "1780617310104513",
-      "Date" : "Thu, 04 Jun 2026 23:55:10 GMT",
+      "x-goog-generation" : "1782869848343803",
+      "Date" : "Wed, 01 Jul 2026 01:37:28 GMT",
       "Content-Type" : "text/html; charset=UTF-8"
     }
   },
-  "uuid" : "731ec588-334a-4ec0-bcc0-c625fe3c4905",
+  "uuid" : "bdc1f058-235f-4435-b509-f9f7c88c0a3c",
   "persistent" : true,
-  "insertionIndex" : 1354
+  "insertionIndex" : 517
 }

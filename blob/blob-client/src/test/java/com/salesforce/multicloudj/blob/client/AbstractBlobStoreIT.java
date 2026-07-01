@@ -2611,10 +2611,8 @@ public abstract class AbstractBlobStoreIT {
   /**
    * Fixed retainUntil for object lock tests so WireMock replay matches recorded request body.
    */
-  private static final Instant OBJECT_LOCK_RETAIN_UNTIL_GOVERNANCE =
-      Instant.parse("2026-03-11T15:47:28.252Z");
   private static final Instant OBJECT_LOCK_RETAIN_UNTIL_COMPLIANCE =
-      Instant.parse("2026-03-11T15:47:25.512Z");
+      Instant.parse("2030-03-11T15:47:25.512Z");
   private static final Instant OBJECT_LOCK_RETAIN_UNTIL_DIRECTORY_UPLOAD =
       Instant.parse("2030-04-30T00:00:00Z");
 
